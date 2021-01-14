@@ -7,11 +7,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class dollar extends AppCompatActivity {
     EditText Enter_dollar;
     Button convert;
     TextView Rupees;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,16 +24,20 @@ public class dollar extends AppCompatActivity {
         convert = (Button) findViewById(R.id.convert_btn);
         Rupees  = (TextView) findViewById(R.id.rupees);
 
+
         convert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String dollars = Enter_dollar.getText().toString();
-                Double doubledollars = Double.parseDouble(dollars);
-                Double rupees = 73.36 * doubledollars;
-                String amount = rupees.toString();
+                if (Enter_dollar.getText().toString().isEmpty()){
+                    Toast.makeText(dollar.this, "Please enter dollar ", Toast.LENGTH_SHORT).show();
+                }else {
+                    String dollars = Enter_dollar.getText().toString();
+                    Double doubledollars = Double.parseDouble(dollars);
+                    Double rupees = 73.36 * doubledollars;
+                    String amount = rupees.toString();
 
-                Rupees.setText(amount);
-
+                    Rupees.setText("Rs    " + amount);
+                }
             }
         });
 

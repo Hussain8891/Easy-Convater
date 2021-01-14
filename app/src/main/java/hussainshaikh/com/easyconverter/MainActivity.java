@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button button1;
+    Button button1,meterToinches;
 
 
     @Override
@@ -17,11 +17,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         button1 = (Button) findViewById(R.id.dollar_btn1);
+        meterToinches = (Button) findViewById(R.id.meter_btn);
+
+
+
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),dollar.class);
                 startActivity(intent);
+            }
+        });
+        meterToinches.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),meter_to_inch.class));
             }
         });
 

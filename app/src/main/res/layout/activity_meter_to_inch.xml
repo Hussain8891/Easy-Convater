@@ -4,27 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".dollar"
+    tools:context=".meter_to_inch"
     android:orientation="vertical"
     android:padding="5dp">
 
     <EditText
-        android:id="@+id/enter_dollar"
+        android:id="@+id/enter_meter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter dollar $"
+        android:hint="Enter meter "
         android:paddingLeft="10dp"
+        android:textColorHint="#000000"
         android:textSize="20sp"
         android:layout_marginTop="20dp"
         android:inputType="number"/>
 
     <Button
-        android:id="@+id/convert_btn"
+        android:id="@+id/convert_to_inch_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginRight="100dp"
         android:layout_marginLeft="100dp"
-        android:text="Convert"
+        android:text="Convert to inch"
         android:textAllCaps="false"
         android:background="@drawable/rounded_button"
         android:textColor="#FFFFFF"
@@ -39,15 +40,12 @@
         android:layout_marginTop="20dp"/>
 
     <TextView
-        android:id="@+id/rupees"
+        android:id="@+id/inch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="00.00"
         android:textSize="30sp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"/>
-
-
-
 
 </LinearLayout>

@@ -9,9 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".meter_to_inch" android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".Exammarks"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/marks"></activity>
+        <activity
+            android:name=".meter_to_inch"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".dollar"
+            android:label="@string/dollar"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
